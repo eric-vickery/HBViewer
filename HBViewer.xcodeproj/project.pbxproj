@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071010DB1861234300D0CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DA1861234300D0CB9B /* Foundation.framework */; };
+		071010DD1861234300D0CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DC1861234300D0CB9B /* CoreGraphics.framework */; };
+		071010DF1861234300D0CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DE1861234300D0CB9B /* UIKit.framework */; };
+		071010E51861234300D0CB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071010E31861234300D0CB9B /* InfoPlist.strings */; };
+		071010E71861234300D0CB9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 071010E61861234300D0CB9B /* main.m */; };
+		071010EB1861234300D0CB9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 071010EA1861234300D0CB9B /* AppDelegate.m */; };
+		071010EE1861234300D0CB9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071010EC1861234300D0CB9B /* Main.storyboard */; };
+		071010F31861234300D0CB9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071010F21861234300D0CB9B /* Images.xcassets */; };
+		071010FA1861234300D0CB9B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010F91861234300D0CB9B /* XCTest.framework */; };
+		071010FB1861234300D0CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DA1861234300D0CB9B /* Foundation.framework */; };
+		071010FC1861234300D0CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DE1861234300D0CB9B /* UIKit.framework */; };
+		071011041861234300D0CB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071011021861234300D0CB9B /* InfoPlist.strings */; };
+		071011061861234300D0CB9B /* HBViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 071011051861234300D0CB9B /* HBViewerTests.m */; };
+		0711FC4519E5C950000AA77F /* HBAdapterInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4419E5C950000AA77F /* HBAdapterInterface.m */; };
+		0711FC4819E5E3F8000AA77F /* HBAdapterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4719E5E3F8000AA77F /* HBAdapterFactory.m */; };
+		0711FC4B19E5E48C000AA77F /* HBDemoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4A19E5E48C000AA77F /* HBDemoAdapter.m */; };
+		0711FC4E19E6435E000AA77F /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4D19E6435E000AA77F /* ConfigViewController.m */; };
+		0720882819EF720D004C8998 /* WirelessInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720882719EF720D004C8998 /* WirelessInfoViewController.m */; };
+		072D87DC18674D00006BE6A6 /* HBBaseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 072D87DB18674D00006BE6A6 /* HBBaseDevice.m */; };
+		072D87DF18674D86006BE6A6 /* HBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 072D87DE18674D86006BE6A6 /* HBVersion.m */; };
+		07380E9D19FF3238009E88EB /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07380E9C19FF3238009E88EB /* DeviceTableViewController.m */; };
+		074DA95619F83D0900339677 /* ColorPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 074DA95519F83D0900339677 /* ColorPreviewView.m */; };
+		0762953E19EE375600610546 /* HBViewerSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762953D19EE375600610546 /* HBViewerSplitViewController.m */; };
+		0762954119EF094400610546 /* ContainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762954019EF094400610546 /* ContainingViewController.m */; };
+		077F053B186E89770030F36B /* CommonDeviceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077F053A186E89770030F36B /* CommonDeviceDetailsViewController.m */; };
+		0780A15319E4FA3000FA8FAD /* MoistureMeterDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780A15219E4FA3000FA8FAD /* MoistureMeterDevice.swift */; };
+		07953FED19FAFFB200E5EE7F /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07953FEC19FAFFB200E5EE7F /* ColorPicker.storyboard */; };
+		0798D75319E470C40082089A /* SimpleFlatRoundGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798D75119E470C40082089A /* SimpleFlatRoundGaugeView.swift */; };
+		0798D75A19E4EA4E0082089A /* CustomGaugeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798D75919E4EA4E0082089A /* CustomGaugeBase.swift */; };
+		0798D75C19E4EA640082089A /* SimpleFlatStraightGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798D75B19E4EA640082089A /* SimpleFlatStraightGaugeView.swift */; };
+		0798D75E19E4F0910082089A /* HumidityDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798D75D19E4F0910082089A /* HumidityDevice.swift */; };
+		07BC32D41863FF2000F69776 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC32D31863FF2000F69776 /* GCDAsyncSocket.m */; };
+		07BC32D71863FF6A00F69776 /* HBEthernetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC32D61863FF6A00F69776 /* HBEthernetAdapter.m */; };
+		07BD76E4186D261A00097776 /* HBDeviceTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BD76E3186D261A00097776 /* HBDeviceTypes.m */; };
+		07BD76E7186E113500097776 /* BarometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BD76E6186E113500097776 /* BarometerViewController.m */; };
+		07BD76EA186E116B00097776 /* HumidityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BD76E9186E116B00097776 /* HumidityViewController.m */; };
+		07BD76ED186E118500097776 /* MoistureMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BD76EC186E118500097776 /* MoistureMeterViewController.m */; };
+		07BD76F0186E132C00097776 /* HBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BD76EF186E132C00097776 /* HBBaseViewController.m */; };
+		07CAA64C19E396D600CC3B6C /* BarometerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CAA64B19E396D600CC3B6C /* BarometerDevice.swift */; };
+		07CF5AA819F4874C000E4265 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CF5AA719F4874C000E4265 /* GCDAsyncUdpSocket.m */; };
+		07CF5AAB19F5DEE3000E4265 /* HubDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF5AAA19F5DEE3000E4265 /* HubDevice.swift */; };
+		07D4C47D19F714B9003C9FC5 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C47C19F714B9003C9FC5 /* UIColor+Expanded.m */; };
+		07D4C49219F73A3C003C9FC5 /* colorPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07D4C47F19F73A3C003C9FC5 /* colorPicker.bundle */; };
+		07D4C49319F73A3C003C9FC5 /* NEOColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48119F73A3C003C9FC5 /* NEOColorPickerBaseViewController.m */; };
+		07D4C49419F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48319F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m */; };
+		07D4C49619F73A3C003C9FC5 /* NEOColorPickerGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48619F73A3C003C9FC5 /* NEOColorPickerGradientView.m */; };
+		07D4C49719F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48819F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m */; };
+		07D4C49919F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48B19F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.m */; };
+		07D4C49B19F73A3C003C9FC5 /* NEOColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C48E19F73A3C003C9FC5 /* NEOColorPickerViewController.m */; };
+		07D4C49D19F73A3C003C9FC5 /* UIColor+NEOColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C49119F73A3C003C9FC5 /* UIColor+NEOColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071010FD1861234300D0CB9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071010CF1861234300D0CB9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071010D61861234300D0CB9B;
+			remoteInfo = HBViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071010D71861234300D0CB9B /* HBViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071010DA1861234300D0CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		071010DC1861234300D0CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		071010DE1861234300D0CB9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		071010E21861234300D0CB9B /* HBViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBViewer-Info.plist"; sourceTree = "<group>"; };
+		071010E41861234300D0CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		071010E61861234300D0CB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		071010E81861234300D0CB9B /* HBViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBViewer-Prefix.pch"; sourceTree = "<group>"; };
+		071010E91861234300D0CB9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		071010EA1861234300D0CB9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		071010ED1861234300D0CB9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		071010F21861234300D0CB9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		071010F81861234300D0CB9B /* HBViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HBViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071010F91861234300D0CB9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		071011011861234300D0CB9B /* HBViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBViewerTests-Info.plist"; sourceTree = "<group>"; };
+		071011031861234300D0CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		071011051861234300D0CB9B /* HBViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBViewerTests.m; sourceTree = "<group>"; };
+		0711FC4319E5C950000AA77F /* HBAdapterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdapterInterface.h; sourceTree = "<group>"; };
+		0711FC4419E5C950000AA77F /* HBAdapterInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAdapterInterface.m; sourceTree = "<group>"; };
+		0711FC4619E5E3F8000AA77F /* HBAdapterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdapterFactory.h; sourceTree = "<group>"; };
+		0711FC4719E5E3F8000AA77F /* HBAdapterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAdapterFactory.m; sourceTree = "<group>"; };
+		0711FC4919E5E48C000AA77F /* HBDemoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBDemoAdapter.h; sourceTree = "<group>"; };
+		0711FC4A19E5E48C000AA77F /* HBDemoAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBDemoAdapter.m; sourceTree = "<group>"; };
+		0711FC4C19E6435E000AA77F /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		0711FC4D19E6435E000AA77F /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		0720882619EF720D004C8998 /* WirelessInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirelessInfoViewController.h; sourceTree = "<group>"; };
+		0720882719EF720D004C8998 /* WirelessInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WirelessInfoViewController.m; sourceTree = "<group>"; };
+		072D87D91867417E006BE6A6 /* HBAdapterInterfaceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBAdapterInterfaceDelegate.h; sourceTree = "<group>"; };
+		072D87DA18674D00006BE6A6 /* HBBaseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBaseDevice.h; sourceTree = "<group>"; };
+		072D87DB18674D00006BE6A6 /* HBBaseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseDevice.m; sourceTree = "<group>"; };
+		072D87DD18674D86006BE6A6 /* HBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBVersion.h; sourceTree = "<group>"; };
+		072D87DE18674D86006BE6A6 /* HBVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBVersion.m; sourceTree = "<group>"; };
+		07380E9B19FF3238009E88EB /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
+		07380E9C19FF3238009E88EB /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
+		074DA95419F83D0900339677 /* ColorPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPreviewView.h; sourceTree = "<group>"; };
+		074DA95519F83D0900339677 /* ColorPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPreviewView.m; sourceTree = "<group>"; };
+		0762953C19EE375600610546 /* HBViewerSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBViewerSplitViewController.h; sourceTree = "<group>"; };
+		0762953D19EE375600610546 /* HBViewerSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBViewerSplitViewController.m; sourceTree = "<group>"; };
+		0762953F19EF094400610546 /* ContainingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainingViewController.h; sourceTree = "<group>"; };
+		0762954019EF094400610546 /* ContainingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainingViewController.m; sourceTree = "<group>"; };
+		077F0539186E89770030F36B /* CommonDeviceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDeviceDetailsViewController.h; sourceTree = "<group>"; };
+		077F053A186E89770030F36B /* CommonDeviceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDeviceDetailsViewController.m; sourceTree = "<group>"; };
+		0780A15219E4FA3000FA8FAD /* MoistureMeterDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoistureMeterDevice.swift; sourceTree = "<group>"; };
+		07953FEC19FAFFB200E5EE7F /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
+		0798D75119E470C40082089A /* SimpleFlatRoundGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFlatRoundGaugeView.swift; sourceTree = "<group>"; };
+		0798D75919E4EA4E0082089A /* CustomGaugeBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGaugeBase.swift; sourceTree = "<group>"; };
+		0798D75B19E4EA640082089A /* SimpleFlatStraightGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleFlatStraightGaugeView.swift; sourceTree = "<group>"; };
+		0798D75D19E4F0910082089A /* HumidityDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumidityDevice.swift; sourceTree = "<group>"; };
+		07BC32D21863FF2000F69776 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		07BC32D31863FF2000F69776 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		07BC32D51863FF6A00F69776 /* HBEthernetAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBEthernetAdapter.h; sourceTree = "<group>"; };
+		07BC32D61863FF6A00F69776 /* HBEthernetAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBEthernetAdapter.m; sourceTree = "<group>"; };
+		07BD76E2186D261A00097776 /* HBDeviceTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBDeviceTypes.h; sourceTree = "<group>"; };
+		07BD76E3186D261A00097776 /* HBDeviceTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBDeviceTypes.m; sourceTree = "<group>"; };
+		07BD76E5186E113500097776 /* BarometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarometerViewController.h; sourceTree = "<group>"; };
+		07BD76E6186E113500097776 /* BarometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarometerViewController.m; sourceTree = "<group>"; };
+		07BD76E8186E116B00097776 /* HumidityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumidityViewController.h; sourceTree = "<group>"; };
+		07BD76E9186E116B00097776 /* HumidityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumidityViewController.m; sourceTree = "<group>"; };
+		07BD76EB186E118500097776 /* MoistureMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoistureMeterViewController.h; sourceTree = "<group>"; };
+		07BD76EC186E118500097776 /* MoistureMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoistureMeterViewController.m; sourceTree = "<group>"; };
+		07BD76EE186E132C00097776 /* HBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBaseViewController.h; sourceTree = "<group>"; };
+		07BD76EF186E132C00097776 /* HBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseViewController.m; sourceTree = "<group>"; };
+		07CAA64A19E396D500CC3B6C /* HBViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBViewer-Bridging-Header.h"; sourceTree = "<group>"; };
+		07CAA64B19E396D600CC3B6C /* BarometerDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometerDevice.swift; sourceTree = "<group>"; };
+		07CF5AA619F4874C000E4265 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		07CF5AA719F4874C000E4265 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		07CF5AAA19F5DEE3000E4265 /* HubDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HubDevice.swift; sourceTree = "<group>"; };
+		07D4C47B19F714B9003C9FC5 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		07D4C47C19F714B9003C9FC5 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		07D4C47F19F73A3C003C9FC5 /* colorPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = colorPicker.bundle; sourceTree = "<group>"; };
+		07D4C48019F73A3C003C9FC5 /* NEOColorPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerBaseViewController.h; sourceTree = "<group>"; };
+		07D4C48119F73A3C003C9FC5 /* NEOColorPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerBaseViewController.m; sourceTree = "<group>"; };
+		07D4C48219F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerFavoritesViewController.h; sourceTree = "<group>"; };
+		07D4C48319F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerFavoritesViewController.m; sourceTree = "<group>"; };
+		07D4C48519F73A3C003C9FC5 /* NEOColorPickerGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerGradientView.h; sourceTree = "<group>"; };
+		07D4C48619F73A3C003C9FC5 /* NEOColorPickerGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerGradientView.m; sourceTree = "<group>"; };
+		07D4C48719F73A3C003C9FC5 /* NEOColorPickerHSLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerHSLViewController.h; sourceTree = "<group>"; };
+		07D4C48819F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerHSLViewController.m; sourceTree = "<group>"; };
+		07D4C48A19F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerHueGridViewController.h; sourceTree = "<group>"; };
+		07D4C48B19F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerHueGridViewController.m; sourceTree = "<group>"; };
+		07D4C48D19F73A3C003C9FC5 /* NEOColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerViewController.h; sourceTree = "<group>"; };
+		07D4C48E19F73A3C003C9FC5 /* NEOColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerViewController.m; sourceTree = "<group>"; };
+		07D4C49019F73A3C003C9FC5 /* UIColor+NEOColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NEOColor.h"; sourceTree = "<group>"; };
+		07D4C49119F73A3C003C9FC5 /* UIColor+NEOColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NEOColor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071010D41861234300D0CB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071010DD1861234300D0CB9B /* CoreGraphics.framework in Frameworks */,
+				071010DF1861234300D0CB9B /* UIKit.framework in Frameworks */,
+				071010DB1861234300D0CB9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071010F51861234300D0CB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071010FA1861234300D0CB9B /* XCTest.framework in Frameworks */,
+				071010FC1861234300D0CB9B /* UIKit.framework in Frameworks */,
+				071010FB1861234300D0CB9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071010CE1861234300D0CB9B = {
+			isa = PBXGroup;
+			children = (
+				071010E01861234300D0CB9B /* HBViewer */,
+				071010FF1861234300D0CB9B /* HBViewerTests */,
+				071010D91861234300D0CB9B /* Frameworks */,
+				071010D81861234300D0CB9B /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		071010D81861234300D0CB9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071010D71861234300D0CB9B /* HBViewer.app */,
+				071010F81861234300D0CB9B /* HBViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		071010D91861234300D0CB9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				071010DA1861234300D0CB9B /* Foundation.framework */,
+				071010DC1861234300D0CB9B /* CoreGraphics.framework */,
+				071010DE1861234300D0CB9B /* UIKit.framework */,
+				071010F91861234300D0CB9B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		071010E01861234300D0CB9B /* HBViewer */ = {
+			isa = PBXGroup;
+			children = (
+				07D4C47E19F73A3C003C9FC5 /* ColorPicker */,
+				07D4C47A19F714B9003C9FC5 /* Color */,
+				07CF5AA919F4A65C000E4265 /* Socket */,
+				0798D75019E470A30082089A /* GUI Widgets */,
+				07BD76E1186D25AA00097776 /* Devices */,
+				07BD76E0186D258B00097776 /* Interface */,
+				072D87DD18674D86006BE6A6 /* HBVersion.h */,
+				072D87DE18674D86006BE6A6 /* HBVersion.m */,
+				071010EC1861234300D0CB9B /* Main.storyboard */,
+				07380E9B19FF3238009E88EB /* DeviceTableViewController.h */,
+				07380E9C19FF3238009E88EB /* DeviceTableViewController.m */,
+				0720882619EF720D004C8998 /* WirelessInfoViewController.h */,
+				0720882719EF720D004C8998 /* WirelessInfoViewController.m */,
+				0762953F19EF094400610546 /* ContainingViewController.h */,
+				0762954019EF094400610546 /* ContainingViewController.m */,
+				0762953C19EE375600610546 /* HBViewerSplitViewController.h */,
+				0762953D19EE375600610546 /* HBViewerSplitViewController.m */,
+				0711FC4C19E6435E000AA77F /* ConfigViewController.h */,
+				0711FC4D19E6435E000AA77F /* ConfigViewController.m */,
+				077F0539186E89770030F36B /* CommonDeviceDetailsViewController.h */,
+				077F053A186E89770030F36B /* CommonDeviceDetailsViewController.m */,
+				07BD76E5186E113500097776 /* BarometerViewController.h */,
+				07BD76E6186E113500097776 /* BarometerViewController.m */,
+				07BD76E8186E116B00097776 /* HumidityViewController.h */,
+				07BD76E9186E116B00097776 /* HumidityViewController.m */,
+				07BD76EB186E118500097776 /* MoistureMeterViewController.h */,
+				07BD76EC186E118500097776 /* MoistureMeterViewController.m */,
+				07BD76EE186E132C00097776 /* HBBaseViewController.h */,
+				07BD76EF186E132C00097776 /* HBBaseViewController.m */,
+				071010E11861234300D0CB9B /* Supporting Files */,
+			);
+			path = HBViewer;
+			sourceTree = "<group>";
+		};
+		071010E11861234300D0CB9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				071010F21861234300D0CB9B /* Images.xcassets */,
+				071010E91861234300D0CB9B /* AppDelegate.h */,
+				071010EA1861234300D0CB9B /* AppDelegate.m */,
+				071010E21861234300D0CB9B /* HBViewer-Info.plist */,
+				071010E31861234300D0CB9B /* InfoPlist.strings */,
+				071010E61861234300D0CB9B /* main.m */,
+				071010E81861234300D0CB9B /* HBViewer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		071010FF1861234300D0CB9B /* HBViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				071011051861234300D0CB9B /* HBViewerTests.m */,
+				071011001861234300D0CB9B /* Supporting Files */,
+			);
+			path = HBViewerTests;
+			sourceTree = "<group>";
+		};
+		071011001861234300D0CB9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				071011011861234300D0CB9B /* HBViewerTests-Info.plist */,
+				071011021861234300D0CB9B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0798D75019E470A30082089A /* GUI Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				0798D75B19E4EA640082089A /* SimpleFlatStraightGaugeView.swift */,
+				0798D75919E4EA4E0082089A /* CustomGaugeBase.swift */,
+				0798D75119E470C40082089A /* SimpleFlatRoundGaugeView.swift */,
+			);
+			name = "GUI Widgets";
+			sourceTree = "<group>";
+		};
+		07BD76E0186D258B00097776 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				072D87D91867417E006BE6A6 /* HBAdapterInterfaceDelegate.h */,
+				07BC32D51863FF6A00F69776 /* HBEthernetAdapter.h */,
+				07BC32D61863FF6A00F69776 /* HBEthernetAdapter.m */,
+				0711FC4319E5C950000AA77F /* HBAdapterInterface.h */,
+				0711FC4419E5C950000AA77F /* HBAdapterInterface.m */,
+				0711FC4619E5E3F8000AA77F /* HBAdapterFactory.h */,
+				0711FC4719E5E3F8000AA77F /* HBAdapterFactory.m */,
+				0711FC4919E5E48C000AA77F /* HBDemoAdapter.h */,
+				0711FC4A19E5E48C000AA77F /* HBDemoAdapter.m */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		07BD76E1186D25AA00097776 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				072D87DA18674D00006BE6A6 /* HBBaseDevice.h */,
+				072D87DB18674D00006BE6A6 /* HBBaseDevice.m */,
+				07BD76E2186D261A00097776 /* HBDeviceTypes.h */,
+				07BD76E3186D261A00097776 /* HBDeviceTypes.m */,
+				07CAA64B19E396D600CC3B6C /* BarometerDevice.swift */,
+				0798D75D19E4F0910082089A /* HumidityDevice.swift */,
+				0780A15219E4FA3000FA8FAD /* MoistureMeterDevice.swift */,
+				07CAA64A19E396D500CC3B6C /* HBViewer-Bridging-Header.h */,
+				07CF5AAA19F5DEE3000E4265 /* HubDevice.swift */,
+			);
+			name = Devices;
+			sourceTree = "<group>";
+		};
+		07CF5AA919F4A65C000E4265 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				07CF5AA619F4874C000E4265 /* GCDAsyncUdpSocket.h */,
+				07CF5AA719F4874C000E4265 /* GCDAsyncUdpSocket.m */,
+				07BC32D21863FF2000F69776 /* GCDAsyncSocket.h */,
+				07BC32D31863FF2000F69776 /* GCDAsyncSocket.m */,
+			);
+			name = Socket;
+			sourceTree = "<group>";
+		};
+		07D4C47A19F714B9003C9FC5 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				07D4C47B19F714B9003C9FC5 /* UIColor+Expanded.h */,
+				07D4C47C19F714B9003C9FC5 /* UIColor+Expanded.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		07D4C47E19F73A3C003C9FC5 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				07D4C47F19F73A3C003C9FC5 /* colorPicker.bundle */,
+				07D4C48019F73A3C003C9FC5 /* NEOColorPickerBaseViewController.h */,
+				07D4C48119F73A3C003C9FC5 /* NEOColorPickerBaseViewController.m */,
+				07D4C48219F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.h */,
+				07D4C48319F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m */,
+				07D4C48519F73A3C003C9FC5 /* NEOColorPickerGradientView.h */,
+				07D4C48619F73A3C003C9FC5 /* NEOColorPickerGradientView.m */,
+				074DA95419F83D0900339677 /* ColorPreviewView.h */,
+				074DA95519F83D0900339677 /* ColorPreviewView.m */,
+				07D4C48719F73A3C003C9FC5 /* NEOColorPickerHSLViewController.h */,
+				07D4C48819F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m */,
+				07D4C48A19F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.h */,
+				07D4C48B19F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.m */,
+				07D4C48D19F73A3C003C9FC5 /* NEOColorPickerViewController.h */,
+				07D4C48E19F73A3C003C9FC5 /* NEOColorPickerViewController.m */,
+				07D4C49019F73A3C003C9FC5 /* UIColor+NEOColor.h */,
+				07D4C49119F73A3C003C9FC5 /* UIColor+NEOColor.m */,
+				07953FEC19FAFFB200E5EE7F /* ColorPicker.storyboard */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071010D61861234300D0CB9B /* HBViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071011091861234300D0CB9B /* Build configuration list for PBXNativeTarget "HBViewer" */;
+			buildPhases = (
+				071010D31861234300D0CB9B /* Sources */,
+				071010D41861234300D0CB9B /* Frameworks */,
+				071010D51861234300D0CB9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HBViewer;
+			productName = HBViewer;
+			productReference = 071010D71861234300D0CB9B /* HBViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		071010F71861234300D0CB9B /* HBViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0710110C1861234300D0CB9B /* Build configuration list for PBXNativeTarget "HBViewerTests" */;
+			buildPhases = (
+				071010F41861234300D0CB9B /* Sources */,
+				071010F51861234300D0CB9B /* Frameworks */,
+				071010F61861234300D0CB9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071010FE1861234300D0CB9B /* PBXTargetDependency */,
+			);
+			name = HBViewerTests;
+			productName = HBViewerTests;
+			productReference = 071010F81861234300D0CB9B /* HBViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		071010CF1861234300D0CB9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Eric Vickery";
+				TargetAttributes = {
+					071010D61861234300D0CB9B = {
+						DevelopmentTeam = CWNCTDGDL5;
+					};
+					071010F71861234300D0CB9B = {
+						TestTargetID = 071010D61861234300D0CB9B;
+					};
+				};
+			};
+			buildConfigurationList = 071010D21861234300D0CB9B /* Build configuration list for PBXProject "HBViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 071010CE1861234300D0CB9B;
+			productRefGroup = 071010D81861234300D0CB9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071010D61861234300D0CB9B /* HBViewer */,
+				071010F71861234300D0CB9B /* HBViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071010D51861234300D0CB9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071010F31861234300D0CB9B /* Images.xcassets in Resources */,
+				071010E51861234300D0CB9B /* InfoPlist.strings in Resources */,
+				07953FED19FAFFB200E5EE7F /* ColorPicker.storyboard in Resources */,
+				071010EE1861234300D0CB9B /* Main.storyboard in Resources */,
+				07D4C49219F73A3C003C9FC5 /* colorPicker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071010F61861234300D0CB9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071011041861234300D0CB9B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071010D31861234300D0CB9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0798D75E19E4F0910082089A /* HumidityDevice.swift in Sources */,
+				0762953E19EE375600610546 /* HBViewerSplitViewController.m in Sources */,
+				0711FC4819E5E3F8000AA77F /* HBAdapterFactory.m in Sources */,
+				07D4C49B19F73A3C003C9FC5 /* NEOColorPickerViewController.m in Sources */,
+				07D4C49719F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m in Sources */,
+				074DA95619F83D0900339677 /* ColorPreviewView.m in Sources */,
+				07BD76EA186E116B00097776 /* HumidityViewController.m in Sources */,
+				07BC32D71863FF6A00F69776 /* HBEthernetAdapter.m in Sources */,
+				07BC32D41863FF2000F69776 /* GCDAsyncSocket.m in Sources */,
+				07CF5AAB19F5DEE3000E4265 /* HubDevice.swift in Sources */,
+				07BD76ED186E118500097776 /* MoistureMeterViewController.m in Sources */,
+				0720882819EF720D004C8998 /* WirelessInfoViewController.m in Sources */,
+				0798D75319E470C40082089A /* SimpleFlatRoundGaugeView.swift in Sources */,
+				07D4C47D19F714B9003C9FC5 /* UIColor+Expanded.m in Sources */,
+				07BD76F0186E132C00097776 /* HBBaseViewController.m in Sources */,
+				07BD76E7186E113500097776 /* BarometerViewController.m in Sources */,
+				07D4C49419F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m in Sources */,
+				072D87DC18674D00006BE6A6 /* HBBaseDevice.m in Sources */,
+				07BD76E4186D261A00097776 /* HBDeviceTypes.m in Sources */,
+				0762954119EF094400610546 /* ContainingViewController.m in Sources */,
+				0798D75C19E4EA640082089A /* SimpleFlatStraightGaugeView.swift in Sources */,
+				07D4C49319F73A3C003C9FC5 /* NEOColorPickerBaseViewController.m in Sources */,
+				07D4C49919F73A3C003C9FC5 /* NEOColorPickerHueGridViewController.m in Sources */,
+				07D4C49D19F73A3C003C9FC5 /* UIColor+NEOColor.m in Sources */,
+				077F053B186E89770030F36B /* CommonDeviceDetailsViewController.m in Sources */,
+				071010EB1861234300D0CB9B /* AppDelegate.m in Sources */,
+				07380E9D19FF3238009E88EB /* DeviceTableViewController.m in Sources */,
+				072D87DF18674D86006BE6A6 /* HBVersion.m in Sources */,
+				0711FC4B19E5E48C000AA77F /* HBDemoAdapter.m in Sources */,
+				071010E71861234300D0CB9B /* main.m in Sources */,
+				0711FC4519E5C950000AA77F /* HBAdapterInterface.m in Sources */,
+				0780A15319E4FA3000FA8FAD /* MoistureMeterDevice.swift in Sources */,
+				0798D75A19E4EA4E0082089A /* CustomGaugeBase.swift in Sources */,
+				07D4C49619F73A3C003C9FC5 /* NEOColorPickerGradientView.m in Sources */,
+				0711FC4E19E6435E000AA77F /* ConfigViewController.m in Sources */,
+				07CF5AA819F4874C000E4265 /* GCDAsyncUdpSocket.m in Sources */,
+				07CAA64C19E396D600CC3B6C /* BarometerDevice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071010F41861234300D0CB9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071011061861234300D0CB9B /* HBViewerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071010FE1861234300D0CB9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071010D61861234300D0CB9B /* HBViewer */;
+			targetProxy = 071010FD1861234300D0CB9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		071010E31861234300D0CB9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071010E41861234300D0CB9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		071010EC1861234300D0CB9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071010ED1861234300D0CB9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		071011021861234300D0CB9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071011031861234300D0CB9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071011071861234300D0CB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		071011081861234300D0CB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0710110A1861234300D0CB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
+				INFOPLIST_FILE = "HBViewer/HBViewer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = HBViewer;
+				SWIFT_OBJC_BRIDGING_HEADER = "HBViewer/HBViewer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0710110B1861234300D0CB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
+				INFOPLIST_FILE = "HBViewer/HBViewer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = HBViewer;
+				SWIFT_OBJC_BRIDGING_HEADER = "HBViewer/HBViewer-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0710110D1861234300D0CB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HBViewer.app/HBViewer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HBViewerTests/HBViewerTests-Info.plist";
+				PRODUCT_NAME = HBViewerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0710110E1861234300D0CB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HBViewer.app/HBViewer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
+				INFOPLIST_FILE = "HBViewerTests/HBViewerTests-Info.plist";
+				PRODUCT_NAME = HBViewerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071010D21861234300D0CB9B /* Build configuration list for PBXProject "HBViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071011071861234300D0CB9B /* Debug */,
+				071011081861234300D0CB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071011091861234300D0CB9B /* Build configuration list for PBXNativeTarget "HBViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0710110A1861234300D0CB9B /* Debug */,
+				0710110B1861234300D0CB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0710110C1861234300D0CB9B /* Build configuration list for PBXNativeTarget "HBViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0710110D1861234300D0CB9B /* Debug */,
+				0710110E1861234300D0CB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 071010CF1861234300D0CB9B /* Project object */;
+}
