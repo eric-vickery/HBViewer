@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HBBaseDevice.h"
+#import "HBViewer-Swift.h"
 
 #define GAUGE_EMPTY_COLOR_KEY	@"Gauge Empty Color"
 #define GAUGE_FILLED_COLOR_KEY	@"Gauge Filled Color"

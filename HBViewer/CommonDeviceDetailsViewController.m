@@ -8,6 +8,9 @@
 
 #import "CommonDeviceDetailsViewController.h"
 #import "WirelessInfoViewController.h"
+#import "HBDeviceTypes.h"
+#import "HBVersion.h"
+#import "HBViewer-Swift.h"
 
 @interface CommonDeviceDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -57,7 +60,7 @@
 	if ([segue.identifier isEqualToString:@"Wireless Info Popover"])
 		{
 		WirelessInfoViewController *viewController = (WirelessInfoViewController *)segue.destinationViewController;
-		NSNumber *lastHeard = [self.device lastHeard];
+		NSNumber *lastHeard = [NSNumber numberWithInt:[self.device lastHeard]];
 		NSString *lastHeardFormatString;
 		if ([lastHeard intValue] == 1)
 			{

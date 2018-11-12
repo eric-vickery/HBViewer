@@ -13,7 +13,6 @@
 #import "HBAdapterInterface.h"
 #import "HBAdapterFactory.h"
 #import "HBVersion.h"
-#import "HBBaseDevice.h"
 #import "HBDeviceTypes.h"
 
 @interface DeviceTableViewController ()
@@ -26,6 +25,8 @@
 @end
 
 @implementation DeviceTableViewController
+
+@dynamic refreshControl;
 
 - (void) clearOutDetailPane
 {
@@ -75,26 +76,27 @@
 	[HBAdapterFactory loadAdapterWithObserver:self];
 }
 
+- (void) showAlertWithTitle: (NSString*) title message:(NSString*) message
+{
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title
+																			  message: message
+																	   preferredStyle:UIAlertControllerStyleAlert];
+	
+	UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+	[alertController addAction: defaultAction];
+	
+	[self presentViewController:alertController animated:YES completion:nil];
+	
+}
+
 - (void) couldNotFindAnAdapter
 {
-	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-													  message:@"Could not find a Master on the network. Make sure the Master is powered on."
-													 delegate:nil
-											cancelButtonTitle:@"OK"
-											otherButtonTitles:nil];
-	
-	[message show];
+	[self showAlertWithTitle:@"Error" message:@"Could not find a Master on the network. Make sure the Master is powered on."];
 }
 
 - (void) couldNotLoadAdapter
 {
-	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-													  message:@"There was a problem connecting to the Master."
-													 delegate:nil
-											cancelButtonTitle:@"OK"
-											otherButtonTitles:nil];
-	
-	[message show];
+	[self showAlertWithTitle:@"Error" message:@"There was a problem connecting to the Master."];
 }
 
 - (void) adapterDisconnected:(NSError *)error
@@ -110,13 +112,7 @@
 		self.title = @"";
 		[self.tableView reloadData];
 		
-		UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-														  message:@"The Master disconnected unexpectedly."
-														 delegate:nil
-												cancelButtonTitle:@"OK"
-												otherButtonTitles:nil];
-		
-		[message show];
+		[self showAlertWithTitle:@"Error" message:@"The Master disconnected unexpectedly."];
 		}
 }
 
@@ -198,7 +194,7 @@
 		}
 	else
 		{
-		if ([device.type intValue] < 255)
+		if (device.type < 255)
 			{
 			[cell.detailTextLabel setText: [NSString stringWithFormat:@"%@ v%@", device.address, [device.version description]]];
 			}
@@ -208,7 +204,7 @@
 			}
 		}
 	
-	switch ([device.type intValue])
+	switch (device.type)
 	{
 		case TYPE_BAROMETER:
 		[cell.imageView setImage: [UIImage imageNamed:@"Barometer"]];
@@ -245,7 +241,7 @@
 	
 	HBBaseDevice *device = [self.adapterInterface.devices objectAtIndex:[indexPath row]];
 	
-	switch ([device.type intValue])
+	switch (device.type)
 	{
 		case TYPE_BAROMETER:
 		widgetView = [mainStoryboard instantiateViewControllerWithIdentifier:@"BarometerView"];

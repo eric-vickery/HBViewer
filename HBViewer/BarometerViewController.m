@@ -7,7 +7,7 @@
 //
 
 #import "BarometerViewController.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 @interface BarometerViewController ()
 @property (nonatomic, strong) BarometerDevice *baroDevice;
@@ -55,8 +55,8 @@
 
 - (void) sampleDevice
 {
-	[self.pressureGauge setGaugeValue:[self.baroDevice getPressureIninHg] animated:YES];
-	[self.tempertureGauge setGaugeValue:[self.baroDevice getTemperatureInFahrenheit] animated:YES];
+	[self.pressureGauge setGaugeValueWithValue:[self.baroDevice getPressureIninHg] animated:YES];
+	[self.tempertureGauge setGaugeValueWithValue:[self.baroDevice getTemperatureInFahrenheit] animated:YES];
 }
 
 @end

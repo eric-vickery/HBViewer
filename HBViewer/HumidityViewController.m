@@ -7,7 +7,7 @@
 //
 
 #import "HumidityViewController.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 @interface HumidityViewController ()
 @property (nonatomic, strong) HumidityDevice *humidityDevice;
@@ -55,8 +55,8 @@
 
 - (void) sampleDevice
 {
-	[self.humidityGauge setGaugeValue:[self.humidityDevice getHumidity] animated:YES];
-	[self.temperatureGauge setGaugeValue:[self.humidityDevice getTemperatureInFahrenheit] animated:YES];
+	[self.humidityGauge setGaugeValueWithValue: [self.humidityDevice getHumidity] animated: YES];
+	[self.temperatureGauge setGaugeValueWithValue: [self.humidityDevice getTemperatureInFahrenheit] animated: YES];
 }
 
 @end

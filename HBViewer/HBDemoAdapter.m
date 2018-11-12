@@ -8,8 +8,7 @@
 
 #import "HBDemoAdapter.h"
 #import "HBDeviceTypes.h"
-#import "HBBaseDevice.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 @implementation HBDemoAdapter
 
@@ -145,16 +144,16 @@
 	{
 	HBBaseDevice *device;
 	
-	device = [[BarometerDevice alloc] initWithHBInterface: self AndAddress: @"Demo"];
-	device.type = [NSNumber numberWithInt:TYPE_BAROMETER];
+	device = [[BarometerDevice alloc] initWithHBInterface: self address: @"Demo"];
+	device.type = TYPE_BAROMETER;
 	[self.devices addObject:device];
 
-	device = [[HumidityDevice alloc] initWithHBInterface: self AndAddress: @"Demo"];
-	device.type = [NSNumber numberWithInt:TYPE_HUMIDITY];
+	device = [[HumidityDevice alloc] initWithHBInterface: self address: @"Demo"];
+	device.type = TYPE_HUMIDITY;
 	[self.devices addObject:device];
 
-	device = [[MoistureMeterDevice alloc] initWithHBInterface: self AndAddress: @"Demo"];
-	device.type = [NSNumber numberWithInt:TYPE_MOISTURE_METER];
+	device = [[MoistureMeterDevice alloc] initWithHBInterface: self address: @"Demo"];
+	device.type = TYPE_MOISTURE_METER;
 	[self.devices addObject:device];
 
 	dispatch_async(dispatch_get_main_queue(),

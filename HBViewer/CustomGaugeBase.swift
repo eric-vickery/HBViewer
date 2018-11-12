@@ -12,14 +12,14 @@ import GLKit
 @IBDesignable class CustomGaugeBase: UIView
 {
 	@IBInspectable var gaugeValue: Float = 0.0
-		{
+	{
 		didSet
-			{
+		{
 			gaugeValue = min(gaugeMaxValue, max(gaugeMinValue, gaugeValue))
 			gaugeRelativeValue = gaugeValue - gaugeMinValue
 			setupView()
-			}
 		}
+	}
 	
 	var gaugeRelativeValue: Float = 0.0
 	
@@ -28,7 +28,7 @@ import GLKit
 	var tickCounter: Int = 0;
 	
 	@IBInspectable var gaugeMinValue: Float = 0.0
-		{
+	{
 		didSet
 		{
 			gaugeRelativeValue = gaugeValue - gaugeMinValue
@@ -37,7 +37,7 @@ import GLKit
 	}
 	
 	@IBInspectable var gaugeMaxValue: Float = 100.0
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -45,7 +45,7 @@ import GLKit
 	}
 
 	@IBInspectable var showScaleText: Bool = true
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -53,7 +53,7 @@ import GLKit
 	}
 	
 	@IBInspectable var scaleFont: UIFont = UIFont(name: "Helvetica", size:20)!
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -61,7 +61,7 @@ import GLKit
 	}
 	
 	@IBInspectable var currentValueFont: UIFont = UIFont(name: "Helvetica", size:30)!
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -69,7 +69,7 @@ import GLKit
 	}
 	
 	@IBInspectable var unitOfMeasure: String = ""
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -77,15 +77,15 @@ import GLKit
 	}
 	
 	@IBInspectable var unitOfMeasureFont: UIFont = UIFont(name: "Helvetica", size:15)!
-		{
+	{
 		didSet
 		{
 			setupView()
 		}
 	}
 	
-	@IBInspectable var unitOfMeasureColor: UIColor = UIColor.blackColor()
-		{
+	@IBInspectable var unitOfMeasureColor: UIColor = UIColor.black
+	{
 		didSet
 		{
 			setupView()
@@ -93,7 +93,7 @@ import GLKit
 	}
 	
 	@IBInspectable var gaugeValueFont: UIFont = UIFont(name: "Helvetica", size:30)!
-		{
+	{
 		didSet
 		{
 			setupView()
@@ -101,92 +101,90 @@ import GLKit
 	}
 	
 	func setupView()
-		{
+	{
 		self.setNeedsDisplay()
-		}
+	}
 	
-	func setGaugeValue(value: Float, animated: Bool) -> Void
-		{
+	@objc func setGaugeValue(value: Float, animated: Bool) -> Void
+	{
 		if (!animated)
-			{
+		{
 			gaugeValue = value;
-			}
+		}
 		else
-			{
+		{
 			gaugeStepValue = (value - gaugeValue) / 10.0
 			gaugeNewValue = value
 			
 			// Setup a timer
 			tickCounter = 0
-			NSTimer.scheduledTimerWithTimeInterval(0.075, target: self, selector: "gaugeStepTick:", userInfo: nil, repeats: true)
-			}
+			Timer.scheduledTimer(timeInterval: 0.075, target: self, selector: #selector(CustomGaugeBase.gaugeStepTick(timer:)), userInfo: nil, repeats: true)
 		}
+	}
 	
-	func gaugeStepTick(timer:NSTimer!)
-		{
+	@objc func gaugeStepTick(timer: Timer!)
+	{
 		gaugeValue += gaugeStepValue
 		
 		if (tickCounter < 10)
-			{
-			tickCounter++
-			}
+		{
+			tickCounter += 1
+		}
 		else
-			{
+		{
 			timer.invalidate()
-			}
 		}
+	}
 	
-	func drawRect (context: CGContextRef, rect: CGRect, fillColor: UIColor) -> Void
-		{
-		CGContextSaveGState(context)
+	func drawRect (context: CGContext, rect: CGRect, fillColor: UIColor)
+	{
+		context.saveGState()
 		
-		CGContextSetLineWidth(context, 0.01)
-		CGContextSetFillColorWithColor(context, fillColor.CGColor)
-		CGContextSetStrokeColorWithColor(context, fillColor.CGColor)
+		context.setLineWidth(0.01)
+		context.setFillColor(fillColor.cgColor)
+		context.setStrokeColor(fillColor.cgColor)
 		
-		CGContextFillRect(context, rect)
+		context.fill(rect)
 		
-		CGContextRestoreGState(context)
-		}
+		context.restoreGState()
+	}
 	
-	func drawArc (context: CGContextRef, centerPoint: CGPoint, radius: CGFloat, lineColor: UIColor, lineWidth: CGFloat, startingAngleInDegrees: Float, endingAngleInDegrees: Float) -> Void
-		{
-		CGContextSaveGState(context)
+	func drawArc (context: CGContext, centerPoint: CGPoint, radius: CGFloat, lineColor: UIColor, lineWidth: CGFloat, startingAngleInDegrees: Float, endingAngleInDegrees: Float)
+	{
+		context.saveGState()
 		
-		CGContextSetLineWidth(context, lineWidth)
-		CGContextSetStrokeColorWithColor(context, lineColor.CGColor)
+		context.setLineWidth(lineWidth)
+		context.setStrokeColor(lineColor.cgColor)
 		
 		let startAngle: CGFloat = CGFloat(GLKMathDegreesToRadians(90.0 + startingAngleInDegrees))
 		let endAngle: CGFloat = CGFloat(GLKMathDegreesToRadians(90.0 + endingAngleInDegrees))
-		CGContextAddArc(context, centerPoint.x, centerPoint.y, radius - (lineWidth / 2), startAngle, endAngle, 0)
-		CGContextStrokePath(context)
+		context.addArc(center: centerPoint, radius: radius - (lineWidth / 2), startAngle: startAngle, endAngle: endAngle, clockwise: false)
+		context.strokePath()
 		
-		CGContextRestoreGState(context)
-		}
+		context.restoreGState()
+	}
 	
-	func drawTickMark (context: CGContextRef, centerPoint: CGPoint, radius: CGFloat, lineColor: UIColor, lineWidth: CGFloat, lineLength: CGFloat, angleInDegrees: Float) -> Void
-		{
-		CGContextSaveGState(context)
+	func drawTickMark (context: CGContext, centerPoint: CGPoint, radius: CGFloat, lineColor: UIColor, lineWidth: CGFloat, lineLength: CGFloat, angleInDegrees: Float)
+	{
+		context.saveGState()
 		
-		CGContextSetAllowsAntialiasing(context, true)
-		CGContextSetLineWidth(context, lineWidth)
-		CGContextSetLineCap(context, kCGLineCapRound)
-		CGContextSetStrokeColorWithColor(context, lineColor.CGColor)
+		context.setAllowsAntialiasing(true)
+		context.setLineWidth(lineWidth)
+		context.setLineCap(.round)
+		context.setStrokeColor(lineColor.cgColor)
 
 		var a = radius * CGFloat(sin(GLKMathDegreesToRadians(angleInDegrees)))
 		var b = radius * CGFloat(cos(GLKMathDegreesToRadians(angleInDegrees)))
-		var x = centerPoint.x + CGFloat(b)
-		var y = centerPoint.y + CGFloat(a)
-		CGContextMoveToPoint(context, x, y)
+		var newPoint = CGPoint(x: centerPoint.x + CGFloat(b), y: centerPoint.y + CGFloat(a))
+		context.move(to: newPoint)
 
 		a = (radius - lineLength) * CGFloat(sin(GLKMathDegreesToRadians(angleInDegrees)))
 		b = (radius - lineLength) * CGFloat(cos(GLKMathDegreesToRadians(angleInDegrees)))
-		x = centerPoint.x + CGFloat(b)
-		y = centerPoint.y + CGFloat(a)
-		CGContextAddLineToPoint(context, x, y)
+		newPoint = CGPoint(x: centerPoint.x + CGFloat(b), y: centerPoint.y + CGFloat(a))
+		context.addLine(to: newPoint)
 
-		CGContextStrokePath(context)
+		context.strokePath()
 		
-		CGContextRestoreGState(context)
-		}
+		context.restoreGState()
+	}
 }

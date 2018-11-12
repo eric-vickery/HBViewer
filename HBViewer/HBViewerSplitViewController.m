@@ -13,7 +13,6 @@
 #import "HBAdapterInterface.h"
 #import "HBAdapterFactory.h"
 #import "HBVersion.h"
-#import "HBBaseDevice.h"
 #import "HBDeviceTypes.h"
 
 @interface HBViewerSplitViewController ()

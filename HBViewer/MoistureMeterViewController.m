@@ -7,7 +7,7 @@
 //
 
 #import "MoistureMeterViewController.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 @interface MoistureMeterViewController ()
 @property (nonatomic, strong) MoistureMeterDevice *moistureMeterDevice;
@@ -65,10 +65,10 @@
 - (void) sampleDevice
 {
 	NSArray *sensorReadings = [[NSArray alloc] initWithArray:[self.moistureMeterDevice getSensorData]];
-	[self.channel1Gauge setGaugeValue:[[sensorReadings objectAtIndex: 0] floatValue] animated:YES];
-	[self.channel2Gauge setGaugeValue:[[sensorReadings objectAtIndex: 1] floatValue] animated:YES];
-	[self.channel3Gauge setGaugeValue:[[sensorReadings objectAtIndex: 2] floatValue] animated:YES];
-	[self.channel4Gauge setGaugeValue:[[sensorReadings objectAtIndex: 3] floatValue] animated:YES];
+	[self.channel1Gauge setGaugeValueWithValue:[[sensorReadings objectAtIndex: 0] floatValue] animated:YES];
+	[self.channel2Gauge setGaugeValueWithValue:[[sensorReadings objectAtIndex: 1] floatValue] animated:YES];
+	[self.channel3Gauge setGaugeValueWithValue:[[sensorReadings objectAtIndex: 2] floatValue] animated:YES];
+	[self.channel4Gauge setGaugeValueWithValue:[[sensorReadings objectAtIndex: 3] floatValue] animated:YES];
 }
 
 @end

@@ -8,9 +8,8 @@
 
 #import "HBAdapterInterface.h"
 #import "HBVersion.h"
-#import "HBBaseDevice.h"
 #import "HBDeviceTypes.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 @interface HBAdapterInterface ()
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070BE7E5219A30DE0017C169 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 070BE7E4219A30DE0017C169 /* README.md */; };
 		071010DB1861234300D0CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DA1861234300D0CB9B /* Foundation.framework */; };
 		071010DD1861234300D0CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DC1861234300D0CB9B /* CoreGraphics.framework */; };
 		071010DF1861234300D0CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071010DE1861234300D0CB9B /* UIKit.framework */; };
@@ -25,9 +26,9 @@
 		0711FC4B19E5E48C000AA77F /* HBDemoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4A19E5E48C000AA77F /* HBDemoAdapter.m */; };
 		0711FC4E19E6435E000AA77F /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711FC4D19E6435E000AA77F /* ConfigViewController.m */; };
 		0720882819EF720D004C8998 /* WirelessInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720882719EF720D004C8998 /* WirelessInfoViewController.m */; };
-		072D87DC18674D00006BE6A6 /* HBBaseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 072D87DB18674D00006BE6A6 /* HBBaseDevice.m */; };
 		072D87DF18674D86006BE6A6 /* HBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 072D87DE18674D86006BE6A6 /* HBVersion.m */; };
 		07380E9D19FF3238009E88EB /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07380E9C19FF3238009E88EB /* DeviceTableViewController.m */; };
+		074CBBC62163CEAE00AFDFAC /* HBBaseDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074CBBC52163CEAE00AFDFAC /* HBBaseDevice.swift */; };
 		074DA95619F83D0900339677 /* ColorPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 074DA95519F83D0900339677 /* ColorPreviewView.m */; };
 		0762953E19EE375600610546 /* HBViewerSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762953D19EE375600610546 /* HBViewerSplitViewController.m */; };
 		0762954119EF094400610546 /* ContainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762954019EF094400610546 /* ContainingViewController.m */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070BE7E4219A30DE0017C169 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		071010D71861234300D0CB9B /* HBViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071010DA1861234300D0CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		071010DC1861234300D0CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,12 +100,11 @@
 		0720882619EF720D004C8998 /* WirelessInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirelessInfoViewController.h; sourceTree = "<group>"; };
 		0720882719EF720D004C8998 /* WirelessInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WirelessInfoViewController.m; sourceTree = "<group>"; };
 		072D87D91867417E006BE6A6 /* HBAdapterInterfaceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBAdapterInterfaceDelegate.h; sourceTree = "<group>"; };
-		072D87DA18674D00006BE6A6 /* HBBaseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBaseDevice.h; sourceTree = "<group>"; };
-		072D87DB18674D00006BE6A6 /* HBBaseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseDevice.m; sourceTree = "<group>"; };
 		072D87DD18674D86006BE6A6 /* HBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBVersion.h; sourceTree = "<group>"; };
 		072D87DE18674D86006BE6A6 /* HBVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBVersion.m; sourceTree = "<group>"; };
 		07380E9B19FF3238009E88EB /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
 		07380E9C19FF3238009E88EB /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
+		074CBBC52163CEAE00AFDFAC /* HBBaseDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBBaseDevice.swift; sourceTree = "<group>"; };
 		074DA95419F83D0900339677 /* ColorPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPreviewView.h; sourceTree = "<group>"; };
 		074DA95519F83D0900339677 /* ColorPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPreviewView.m; sourceTree = "<group>"; };
 		0762953C19EE375600610546 /* HBViewerSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBViewerSplitViewController.h; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		071010CE1861234300D0CB9B = {
 			isa = PBXGroup;
 			children = (
+				070BE7E4219A30DE0017C169 /* README.md */,
 				071010E01861234300D0CB9B /* HBViewer */,
 				071010FF1861234300D0CB9B /* HBViewerTests */,
 				071010D91861234300D0CB9B /* Frameworks */,
@@ -309,8 +311,7 @@
 		07BD76E1186D25AA00097776 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				072D87DA18674D00006BE6A6 /* HBBaseDevice.h */,
-				072D87DB18674D00006BE6A6 /* HBBaseDevice.m */,
+				074CBBC52163CEAE00AFDFAC /* HBBaseDevice.swift */,
 				07BD76E2186D261A00097776 /* HBDeviceTypes.h */,
 				07BD76E3186D261A00097776 /* HBDeviceTypes.m */,
 				07CAA64B19E396D600CC3B6C /* BarometerDevice.swift */,
@@ -411,7 +412,7 @@
 		071010CF1861234300D0CB9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Eric Vickery";
 				TargetAttributes = {
 					071010D61861234300D0CB9B = {
@@ -446,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070BE7E5219A30DE0017C169 /* README.md in Resources */,
 				071010F31861234300D0CB9B /* Images.xcassets in Resources */,
 				071010E51861234300D0CB9B /* InfoPlist.strings in Resources */,
 				07953FED19FAFFB200E5EE7F /* ColorPicker.storyboard in Resources */,
@@ -471,6 +473,7 @@
 			files = (
 				0798D75E19E4F0910082089A /* HumidityDevice.swift in Sources */,
 				0762953E19EE375600610546 /* HBViewerSplitViewController.m in Sources */,
+				074CBBC62163CEAE00AFDFAC /* HBBaseDevice.swift in Sources */,
 				0711FC4819E5E3F8000AA77F /* HBAdapterFactory.m in Sources */,
 				07D4C49B19F73A3C003C9FC5 /* NEOColorPickerViewController.m in Sources */,
 				07D4C49719F73A3C003C9FC5 /* NEOColorPickerHSLViewController.m in Sources */,
@@ -486,7 +489,6 @@
 				07BD76F0186E132C00097776 /* HBBaseViewController.m in Sources */,
 				07BD76E7186E113500097776 /* BarometerViewController.m in Sources */,
 				07D4C49419F73A3C003C9FC5 /* NEOColorPickerFavoritesViewController.m in Sources */,
-				072D87DC18674D00006BE6A6 /* HBBaseDevice.m in Sources */,
 				07BD76E4186D261A00097776 /* HBDeviceTypes.m in Sources */,
 				0762954119EF094400610546 /* ContainingViewController.m in Sources */,
 				0798D75C19E4EA640082089A /* SimpleFlatStraightGaugeView.swift in Sources */,
@@ -563,18 +565,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -601,18 +617,31 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -621,6 +650,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -633,10 +663,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
 				INFOPLIST_FILE = "HBViewer/HBViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyboards.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = HBViewer;
 				SWIFT_OBJC_BRIDGING_HEADER = "HBViewer/HBViewer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -650,9 +683,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
 				INFOPLIST_FILE = "HBViewer/HBViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyboards.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = HBViewer;
 				SWIFT_OBJC_BRIDGING_HEADER = "HBViewer/HBViewer-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -674,6 +710,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "HBViewerTests/HBViewerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyboards.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = HBViewerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -692,6 +729,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBViewer/HBViewer-Prefix.pch";
 				INFOPLIST_FILE = "HBViewerTests/HBViewerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyboards.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = HBViewerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

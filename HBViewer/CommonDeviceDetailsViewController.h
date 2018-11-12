@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HBBaseDevice.h"
+#import "HBViewer-Swift.h"
 
 @interface CommonDeviceDetailsViewController : UIViewController <UIPopoverPresentationControllerDelegate>
 @property (nonatomic, weak) HBBaseDevice *device;

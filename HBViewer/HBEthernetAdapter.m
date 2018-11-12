@@ -2,9 +2,8 @@
 #import "GCDAsyncSocket.h"
 #import "GCDAsyncUdpSocket.h"
 #import "HBVersion.h"
-#import "HBBaseDevice.h"
 #import "HBDeviceTypes.h"
-#import "HBViewer-swift.h"
+#import "HBViewer-Swift.h"
 
 #define ENABLE_BACKGROUNDING  0
 
@@ -663,20 +662,20 @@
 	for (NSString *deviceAddress in self.devicesAddresses)
 		{
 //		NSLog(@"Processing device %@", deviceAddress);
-		HBBaseDevice *tempDevice = [[HBBaseDevice alloc] initWithHBInterface: self AndAddress: deviceAddress];
-		NSNumber *type = tempDevice.type;
+		HBBaseDevice *tempDevice = [[HBBaseDevice alloc] initWithHBInterface: self address: deviceAddress];
+		NSNumber *type = [NSNumber numberWithUnsignedInteger: tempDevice.type];
 		switch ([type intValue])
 			{
 			case TYPE_BAROMETER:
-				device = [[BarometerDevice alloc] initWithHBInterface: self AndAddress: deviceAddress];
+				device = [[BarometerDevice alloc] initWithHBInterface: self address: deviceAddress];
 				break;
 				
 			case TYPE_HUMIDITY:
-				device = [[HumidityDevice alloc] initWithHBInterface: self AndAddress: deviceAddress];
+				device = [[HumidityDevice alloc] initWithHBInterface: self address: deviceAddress];
 				break;
 				
 			case TYPE_MOISTURE_METER:
-				device = [[MoistureMeterDevice alloc] initWithHBInterface: self AndAddress: deviceAddress];
+				device = [[MoistureMeterDevice alloc] initWithHBInterface: self address: deviceAddress];
 				break;
 				
 			default:
